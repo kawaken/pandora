@@ -1,0 +1,19 @@
+<footer class="level">
+  <div class="level-left">
+    {{ if .Site.Copyright }}
+    <div class="level-item">{{ .Site.Copyright }}</div>
+    {{ else }}
+    <div class="level-item">© {{ .Site.Title }}</div>
+    {{ end }}
+    {{ if .Site.Contact.twitter }}
+    <div class="level-item">
+        <a href="https://twitter.com/{{ .Site.Author.twitter }}">Twitter</a>
+    </div>
+    {{ end }}
+
+    <div class="level-item"></div>
+  </div>
+
+  <div class="level-right">
+  </div>
+</footer>
