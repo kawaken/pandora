@@ -1,19 +1,16 @@
-<footer class="level">
-  <div class="level-left">
-    {{ if .Site.Copyright }}
-    <div class="level-item">{{ .Site.Copyright }}</div>
-    {{ else }}
-    <div class="level-item">© {{ .Site.Title }}</div>
-    {{ end }}
-    {{ if .Site.Contact.twitter }}
-    <div class="level-item">
-        <a href="https://twitter.com/{{ .Site.Author.twitter }}">Twitter</a>
+<footer class="footer is-paddingless has-background-primary">
+  <div class="container has-background-info">
+    <div class="level">
+      <div class="level-left">
+        {{ if .Site.Copyright }}
+        <div class="level-item">{{ .Site.Copyright }}</div>
+        {{ end }}
+      </div>
+
+      <div class="level-right">
+        <div class="level-item"><span>Powered by&nbsp;</span><a href="https://gohugo.io/">Hugo</a></div>
+        <div class="level-item"><span>Designed by&nbsp;</span><a href="https://github.com/kawaken/pandora">pandora</a></div>
+      </div>
     </div>
-    {{ end }}
-
-    <div class="level-item"></div>
-  </div>
-
-  <div class="level-right">
   </div>
 </footer>
