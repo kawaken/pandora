@@ -3,7 +3,7 @@
     <div class="container">
 
     <div class="navbar-brand">
-      <a class="navbar-item is-size-4" href="{{ .Site.Home.URL }}">{{ .Site.Title }}</a>
+      {{ if not .IsHome }}<a class="navbar-item is-size-4" href="{{ .Site.Home.URL }}">{{ .Site.Title }}</a>{{ end }}
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
         <span></span>
