@@ -1,10 +1,26 @@
-<footer class="footer is-paddingless has-background-primary">
-  <div class="container has-background-info">
+<footer class="footer is-paddingless has-background-white is-size-7">
+  <div class="container">
     <div class="level">
       <div class="level-left">
-        {{ if .Site.Copyright }}
-        <div class="level-item">{{ .Site.Copyright }}</div>
-        {{ end }}
+        <div class="level-item">
+          {{ if .Site.Copyright }}{{ .Site.Copyright }}{{ end }}
+          {{ if .Site.Author.github }}
+          &nbsp;|
+          <a href="https://github.com/{{ .Site.Author.github }}" class="has-text-grey-dark">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+          </a>
+          {{ end }}
+          {{ if .Site.Author.twitter }}
+          &nbsp;|
+          <a href="https://twitter.com/{{ .Site.Author.twitter }}" class="has-text-grey-dark">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+          </a>
+          {{ end }}
+        </div>
       </div>
 
       <div class="level-right">
