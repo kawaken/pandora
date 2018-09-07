@@ -12,6 +12,12 @@
   <!-- Scripts -->
   <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
   <!-- RSS -->
+  {{ if .Site.Author.rss2 }}
+  <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="{{ .Site.Author.rss2 }}">
+  {{ end }}
+  {{ if .Site.Author.atom }}
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="{{ .Site.Author.atom }}">
+  {{ end }}
   <!-- OGP -->
   {{ .Hugo.Generator }}
 </head>
