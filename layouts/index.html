@@ -11,23 +11,14 @@
         </div>
       </div>
     </section>
+    {{ range .Site.Data.top }}
     <section class="section">
-      <div class="container content">
-        <h2 class="subtitle">Talks</h2>
-        <ul>
-          {{ range .Site.Data.talks.Presentations }}
-          <li>{{ .Date }}&nbsp;
-            {{ if .URL }}<a href="{{ .URL }}">{{ .Title }}</a>{{ else }}{{ .Title }}{{ end }}
-            {{ if .At }}&nbsp;at&nbsp;{{ if .At.URL }}<a href="{{ .At.URL }}">{{ .At.Name }}</a>{{ else }}{{ .At.Name }}{{ end }}{{ end }}
-          </li>
-          {{ end }}
-        </ul>
-        <p></p>
-      </div>
-    </section>
-    <section class="section">
-
-    </section>
+        <div class="container content">
+          {{ partial .Partial . }}
+        </div>
+      </section>
+    {{ end }}
+    <section class="section"></section>
   {{- partial "footer.html" . -}}
 </body>
 </html>
