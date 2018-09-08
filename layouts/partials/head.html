@@ -2,9 +2,6 @@
   <!-- Basic -->
   <meta charset="utf-8" />
   <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-  {{ if .Site.Params.favicon -}}
-  <link ref="icon" href="{{ .Site.Params.favicon | absURL }}">
-  {{- end }}
   <!-- Mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- CSS -->
